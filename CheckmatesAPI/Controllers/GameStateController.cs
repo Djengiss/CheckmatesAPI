@@ -14,12 +14,30 @@ namespace CheckmatesAPI.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetGame")]
-        public string Get()
+        [HttpGet]
+        [Route("gameId")]
+        public int Get()
+        {
+            var game = new GameState();
+            game.Id = 1;
+            return game.Id;
+        }
+
+        [HttpGet]
+        [Route("boardstate/{gameId}")]
+        public string Get(int gameId)
         {
             var Newgame = new GameState();
-            Newgame.gameState = "Successfully returned the game data";
             return Newgame.gameState;
         }
+
+        //[HttpGet]
+        //[Route("{gameId}/turnnumber")]
+        //public int Get()
+        //{
+        //    var game = new GameState(); // Should get the game where game.id matches 'gameId'
+        //    game.turnNumber = 13;
+        //    return game.turnNumber;
+        //}
     }
 }

@@ -1,6 +1,6 @@
 @CheckmatesAPI_HostAddress = http://localhost:5106
 
-GET {{CheckmatesAPI_HostAddress}}/weatherforecast/
+GET {{CheckmatesAPI_HostAddress}}/CheckmatesAPI/
 Accept: application/json
 
 ###
