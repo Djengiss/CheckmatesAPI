@@ -2,7 +2,9 @@
 {
     public class Player
     {
-        string color {  get; set; }
-        string name { get; set; }
-    }
+        public string color {  get; set; }
+        public string name { get; set; }
+        public int playerId { get; set; }
 }
+
+    }
