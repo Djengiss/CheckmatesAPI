@@ -24,20 +24,20 @@ namespace CheckmatesAPI.Controllers
         }
 
         [HttpGet]
-        [Route("boardstate/{gameId}")]
-        public string Get(int gameId)
+        [Route("{gameId}/boardstate")]
+        public string GetBoardstate(int gameId)
         {
             var Newgame = new GameState();
             return Newgame.gameState;
         }
 
-        //[HttpGet]
-        //[Route("{gameId}/turnnumber")]
-        //public int Get()
-        //{
-        //    var game = new GameState(); // Should get the game where game.id matches 'gameId'
-        //    game.turnNumber = 13;
-        //    return game.turnNumber;
-        //}
+        [HttpGet]
+        [Route("{gameId}/turnnumber")]
+        public int GetTurnnumber(int gameId)
+        {
+            var game = new GameState(); // Should get the game where game.id matches 'gameId'
+            game.turnNumber = 13;
+            return game.turnNumber;
+        }
     }
 }
