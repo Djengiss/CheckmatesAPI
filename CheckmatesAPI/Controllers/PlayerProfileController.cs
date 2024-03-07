@@ -49,5 +49,12 @@ namespace CheckmatesAPI.Controllers
             player.isOnline = true;
             return player.isOnline;
         }
+
+        [HttpPost]
+        [Route("NewProfile")]
+        public void PostNewProfile()
+        {
+            // TODO: Create new player profile
+        }
     }
 }
